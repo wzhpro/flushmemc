@@ -2,7 +2,7 @@
 本程序仅作技术交流，清空互联网服务器的Memcached缓存可能导致目标系统瘫痪，禁止用于非法用途。
 
 ## 简介
-Memcached反射攻击愈演愈烈，通过本程序可以清空反射源的缓存内容，达到减小攻击流量的目的。
+Memcached反射攻击愈演愈烈，通过本程序可以清空反射源的缓存内容或删除特定的key，达到减小攻击流量的目的。
 
 * 特性：
 
@@ -18,6 +18,10 @@ pip install scapy
 * Flask>=1.0.2
 
 pip install flask
+
+* python-memcached>=1.59
+
+pip install python-memcached
 
 ## 使用方法
 * python main.py
