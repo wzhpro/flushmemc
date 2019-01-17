@@ -61,11 +61,10 @@ def getmemckey(ipaddress):
             item_list=items_data[0].split(':')
             if item_list[1] not in itemid_list:
                 itemid_list.append(item_list[1])
-
         max_size=0
         max_size_key=''
         for itemid in itemid_list:
-            datas=mc.get_stats('cachedump 1 0')
+            datas=mc.get_stats('cachedump ' + itemid +' 0')
             for data in datas[0][1].items():
                 data_key=data[0]
                 data_size=int(data[1].split(' ')[0][1:])
